@@ -94,7 +94,8 @@ header {
   .service {
     width: 300px;
     margin-right: 2.5rem;
-    margin-left: 2.5rem;  
+    margin-left: 2.5rem;
+    margin-bottom: 3rem;  
 }
   
   .service img {
@@ -116,6 +117,14 @@ header {
     flex-direction: column;
     align-items: center;
     font-size: 30px;
+    background-color: rgba(42, 42, 230, 0.688);
+    border-radius: 10px;
+    width: 99vw;
+}
+.contact-text p{
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  color: white;
 }
 .contact-text p,
 .contact-bttn p{
@@ -125,6 +134,7 @@ header {
     display: flex;
     justify-content: space-between;
     width: 33%;
+    padding-bottom: 2rem;
 }
 .contact-bttn button{
     border-radius: 100px;
@@ -141,9 +151,7 @@ header {
     background-color: grey;
 }
 .knowMe{
-    height: 60vh;
     width: 100vw;
-    padding-top: 5rem;
     margin-bottom: auto;
 }
 .conoceme{
@@ -152,21 +160,26 @@ header {
     align-items: center;
 }
 .conoceme img{
-    height: 30rem;
+    height: 45rem;
     border-radius: 20px;
-    margin-top: 3rem;
+    margin-top: 1rem;
     margin-right: 1rem;
+    
 }
 .myself{
     height: auto;
     width: 60vh;
     padding: 20px;
     text-align: center;
+    font-weight: 200;
+}
+.myself h2{
+  padding: 1rem;
 }
 #myRoad{
-    font-size: 16px;
-    font-family: 'Varela Round', sans-serif;
-    font-weight: 100;
+    font-size: 20px;
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-weight: 400;
 }
 .footer {
     display: flex;
@@ -180,6 +193,10 @@ header {
   
   .footer-section {
     margin: 10px;
+  }
+
+  .footer-section img{
+    height: 4rem;
   }
   
   .footer ul {
@@ -199,49 +216,77 @@ header {
   footer ul li a:hover {
     text-decoration: underline;
   }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 738px) {
+    *{
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    *::-webkit-scrollbar {
+      display: none; /* Chrome / Safari / Opera */
+      overflow-y: scroll;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* Internet Explorer / Edge */
+    }
     header {
+      flex-direction: row-reverse;
+      align-items:center;
+      justify-content: space-between;
+    }
+    body{
+      display: flex;
+   
       flex-direction: column;
-      align-items: flex-start;
+    }
+    .menu-toggle{
+      display: flex;
     }
   
     .logo {
       margin-bottom: 1rem;
+      margin-left: 0;
+      margin-right: auto;
+      padding-left: 0;
+    }
+    .logo img{
+      margin-left: 0;
+      margin-bottom: 0;
+      margin-top: 0.5rem;
     }
   
     nav ul {
       display: none;
     }
-  
-    nav ul li {
-      display: block;
-      margin-right: 0;
-      padding: 0;
-      margin-bottom: 0.5rem;
-    }
-  
-    nav ul li:last-child {
-      margin-bottom: 0;
-    }
-  
-    .menu-toggle {
-      display: block;
-      margin-right: 2rem;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-  
-    .menu-toggle.active {
-      color: #333;
-    }
-  
-    .menu {
+
+    .service img{
       display: none;
-      margin-top: 1rem;
     }
-  
-    .menu.active {
-      display: block;
+    .contact{
+      margin: auto;
+    }
+
+    .contact-text{
+      text-align: center;
+      width: 90vw;
+    }
+    #myRoad{
+      font-weight: 200;
+      line-height: 1.5;
+    }
+    .contact-bttn{
+      width: 90vw;
+    }
+    .knowMe img{
+      display: none;
+    }
+    .footer-section ul,
+    .footer-section img{
+      display: none;
+    }
+    .footer{
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
   @media only screen and (max-width: 768px) {
